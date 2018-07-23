@@ -16,4 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableConfigurationProperties(User.class)
 public class WanganConfiguration {
 
+	private final User user;
+
+	@Autowired
+	public WanganConfiguration(User user) {
+		this.user = user;
+	}
+
 }
